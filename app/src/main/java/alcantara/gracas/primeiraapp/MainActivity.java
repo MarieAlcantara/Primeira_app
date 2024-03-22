@@ -1,6 +1,6 @@
-package alcantara.gracas.primeiraapp;//onde está a app
+package alcantara.gracas.primeiraapp;//onde esta a app
 
-//importações
+//importacoes
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -14,17 +14,17 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main);//le o arquivo de layout
 
-        Button btnEnviar = findViewById(R.id.btnEnviar);//indentificando o botão
-        btnEnviar.setOnClickListener(new View.OnClickListener() {//adicionando um ouvidor para o botão
+        Button btnEnviar = findViewById(R.id.btnEnviar);//obter o botao
+        btnEnviar.setOnClickListener(new View.OnClickListener() {//cria um ouvidor para o botao
             @Override
-            public void onClick(View v) {// ao clicar:
-                EditText etDigiteAqui = findViewById(R.id.etDigiteAqui);//pegando o texto digitado
-                String textoDigitado = etDigiteAqui.getText().toString();//convertendo o tipo de texto
-                Intent i = new Intent(MainActivity.this, NextActivity.class);// Intenção de navegar de Onde eu estou, para onde eu vou.
-                i.putExtra("texto", textoDigitado);//preencher dicionário//mandar o texto para a outra tela
-                startActivity(i);
+            public void onClick(View v) {//o metodo onclick e chamado toda vez que tem um clique do mouse no botao
+                EditText etDigiteAqui = findViewById(R.id.etDigiteAqui);
+                String textoDigitado = etDigiteAqui.getText().toString();//pegando o tipo de texto
+                Intent i = new Intent(MainActivity.this, NextActivity.class);// Intencao de navegar de Onde eu estou, para onde eu vou.//ir para a proxima tela
+                i.putExtra("texto", textoDigitado);//preencher dicionario//mandar o texto para a outra tela
+                startActivity(i);//executa a intencao e vai para a proxima tela
             }
         });
     }

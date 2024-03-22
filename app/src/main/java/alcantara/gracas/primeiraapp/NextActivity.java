@@ -1,6 +1,7 @@
-package alcantara.gracas.primeiraapp;//aonde está a app
-//próxima tela
-//importações
+package alcantara.gracas.primeiraapp;//aonde esta a app
+//proxima tela
+
+//importacoes
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -16,8 +17,8 @@ public class NextActivity extends AppCompatActivity {
 
 
         Intent i = getIntent();//pega o intent mandado pela outra tela
-        String texto = i.getStringExtra("texto");//mesma chave definida previamente
-        TextView tvTexto = findViewById(R.id.tvTexto);//indentificando o texto enviado
+        String texto = i.getStringExtra("texto");//mesma chave definida previamente//obter o texto
+        TextView tvTexto = findViewById(R.id.tvTexto);//obter o elemento do textview
         tvTexto.setText(texto);//manda o texto para o text view
     }
 }
